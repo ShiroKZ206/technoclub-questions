@@ -13,3 +13,15 @@ Kata yang paling sering muncul adalah "harta"
 """
 arr = ["harta", "karun", "petualangan", "harta", "kunci", "harta", "petualangan", "harta"]
 # lanjutkan code dibawah ini
+
+from collections import Counter
+
+arr = ["harta", "karun", "petualangan", "harta", "kunci", "harta", "petualangan", "harta"]
+
+# Menggunakan Counter untuk menghitung frekuensi setiap kata
+frekuensi_kata = Counter(arr)
+
+# Mencari kata dengan kemunculan paling sering
+kata_tersering = frekuensi_kata.most_common(1)[0][0]
+
+print(f'Kata yang paling sering muncul adalah "{kata_tersering}"')
